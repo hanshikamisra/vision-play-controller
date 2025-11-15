@@ -12,7 +12,7 @@ cap = cv2.VideoCapture(0)
 in_jump_state = False 
 is_ducking = False
 
-print("✅ Ultimate Controller Ready! Fist to Duck, Up to Jump.")
+print("Ultimate Controller Ready! Fist to Duck, Up to Jump.")
 
 def check_fist(landmarks):
     """Returns True if the hand is a fist (fingers curled down)"""
@@ -74,7 +74,7 @@ while True:
                 # Now check if we should jump
                 # Logic: Hand is OPEN (not fist) AND above the line
                 if cy < jump_line_y:
-                    cv2.putText(frame, "JUMP! 🚀", (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 3)
+                    cv2.putText(frame, "JUMP!", (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 3)
                     
                     if not in_jump_state:
                         pyautogui.press('space')
